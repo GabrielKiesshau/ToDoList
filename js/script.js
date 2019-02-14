@@ -1,19 +1,26 @@
-$("li").click(function()
+$("#toDoList").on("click", "li", function()
 {
     $(this).toggleClass("done");
 });
 
-$(".deleteIcon").click(function()
+$("#toDoList").on("click", ".deleteIcon", (function(event)
 {
-    console.log($(this).parent());
-});
+    $(this).parent().fadeOut("1500", function()
+    {
+        $(this).remove();
+    });
+    event.stopPropagation();
+}));
 
-$(".addIcon").click(function ()
+$("input").keypress(function(event)
 {
-    console.log($("input").textContent);
-});
+    if (event.which === 13 && $("input").val() != "" )
+    {
+        let trashIcon = '<i class="fas fa-trash-alt deleteIcon"></i>';
+        let todoText = $("input").val();
+        
+        let todo = `<li>${trashIcon} ${todoText}</li>`;
 
-$("input").keypress("13", function()
-{
-    console.log($(this).val);
+        $("#toDoList").append(todo);
+    }
 });
