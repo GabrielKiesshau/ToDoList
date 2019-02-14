@@ -1,0 +1,14 @@
+#container {
+    background: lightgray;
+    margin: auto;
+    width: 30%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.done {
+    color: gray;
+    text-decoration-line: line-through;
+}
