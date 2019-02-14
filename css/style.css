@@ -1,14 +1,67 @@
-#container {
-    background: lightgray;
+*
+{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+body {
+    background: #59C173;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #5D26C1, #a17fe0, #59C173);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5D26C1, #a17fe0, #59C173); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#container
+{
     margin: auto;
-    width: 30%;
+    width: 40%;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    background: lightgray;
 }
 
-ul {
+#title
+{
+    background: rgb(55, 117, 231);
+    font-weight: 700;
+    padding-left: 2%;
+}
+
+input
+{
+    border: none;
+    width: 100%;
+    padding-left: 2%;
+}
+
+#toDoList
+{
     list-style-type: none;
+    padding-left: 0;
 }
 
-.done {
+li *
+{
+    padding-left: 2%;
+}
+
+li:nth-child(2n)
+{
+    background: white;
+}
+
+li:hover
+{
+    background: lightcoral;
+    color: white;
+}
+
+.done
+{
     color: gray;
     text-decoration-line: line-through;
+}
+
+@media(min-width:200px)
+{
+
 }

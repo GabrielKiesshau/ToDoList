@@ -22,5 +22,7 @@ $("input").keypress(function(event)
         let todo = `<li>${trashIcon} ${todoText}</li>`;
 
         $("#toDoList").append(todo);
+
+        $("input").val("");
     }
 });
