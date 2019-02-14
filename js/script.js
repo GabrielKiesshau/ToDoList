@@ -3,6 +3,11 @@ $("#toDoList").on("click", "li", function()
     $(this).toggleClass("done");
 });
 
+$("#toDoList").on("mouseenter", "li", function()
+{
+    console.log($(this).children("i"));
+});
+
 $("#toDoList").on("click", ".deleteIcon", (function(event)
 {
     $(this).parent().fadeOut("1500", function()
@@ -14,7 +19,7 @@ $("#toDoList").on("click", ".deleteIcon", (function(event)
 
 $("input").keypress(function(event)
 {
-    if (event.which === 13 && $("input").val() != "" )
+    if (event.which === 13 && $("input").val() != "")
     {
         let trashIcon = '<i class="fas fa-trash-alt deleteIcon"></i>';
         let todoText = $("input").val();
